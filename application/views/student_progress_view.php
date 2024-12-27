@@ -44,7 +44,7 @@
 </head>
 
 <body class="bg-gray-50">
-    <?php require('header.php'); ?>
+    <?php require('header.php')?>
 
     <div class="max-w-4xl mx-auto p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-4" style="color:#286B81;text-transform:uppercase; font-weight:bold; margin-top:110px; margin-left:-50px; font-size:27px">Theo dõi quá trình thực hiện đề tài</h3>

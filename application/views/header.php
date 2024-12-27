@@ -8,7 +8,7 @@
     </button>
     <div class="dropdown-container">
       <a href="http://localhost:3000/dexuatdetai_controller">Đề xuất đề tài</a>
-      <a href="http://localhost:3000/dangkidetai_controller">Đăng kí đề tài</a>
+      <a href="http://localhost:3000/dangkidetai_controller">Đăng ký đề tài</a>
       <a href="http://localhost:3000/quatrinhthuchien_controller">Quá trình thực hiện</a>
     </div>
   <?php endif; ?>

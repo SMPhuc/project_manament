@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://localhost:3000/trove_css.css">
 </head>
 <body>
-    <?php require('header.php'); ?>
+    <?php require('header.php')?>
     <h2 class="text-xs-center">Bạn đã cập nhật thông tin giảng viên thành công</h2>
     <div class="container text-xs-center">
         <a href="http://localhost:3000/LecturerManagement_Controller" class="btn btn-info">Quay lại</a>

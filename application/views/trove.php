@@ -11,7 +11,7 @@
  	<link rel="stylesheet" href="http://localhost:3000/showdata_css.css">
 </head>
 <body>
-	<?php require('header.php'); ?>
+	<?php require('header.php')?>
 	<div class="container">
 	<h3 class="text" style="color:#286B81; text-transform:uppercase; font-weight:bold;">Danh sách sinh viên đã được duyệt đề tài</h3>
         <table class="table table-bordered">

@@ -12,7 +12,7 @@
 </head>
 <body>
 	<?php require('header.php') ?>;
-	<h2 class="text-xs-center">Đề tài đã đủ sinh viên đăng kí</h2>
+	<h2 class="text-xs-center">Đề tài đã đủ sinh viên đăng ký</h2>
 	<div class="container text-xs-center">
 		<a href="http://localhost:3000/showsinhviendangki_controller"  class="btn btn-info">Quay lại</a>
 	</div>

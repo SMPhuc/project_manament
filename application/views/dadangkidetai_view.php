@@ -15,7 +15,7 @@
 <body>
 	<?php require('header.php') ?>;
 	<div class="container">
-		<h2 class="text-xs-center">Bạn đã đăng kí đề tài!</h2>
+		<h2 class="text-xs-center">Bạn đã đăng ký đề tài!</h2>
 	</div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Danh sách sinh viên đăng kí đề tài</title>
+	<title>Danh sách sinh viên đăng ký đề tài</title>
 	<script type="text/javascript" src="http://localhost:3000/vendor/bootstrap.js"></script>
  	<script type="text/javascript" src="http://localhost:3000/1.js"></script>
 	<link rel="stylesheet" href="http://localhost:3000/vendor/bootstrap.css">
@@ -11,7 +11,7 @@
  	<link rel="stylesheet" href="http://localhost:3000/showdata_css.css">
 </head>
 <body>
-	<?php require('header.php'); ?>
+	<?php require('header.php')?>
 	<div class="container">
 		<h3 class="text" style="color:#286B81; text-transform:uppercase; font-weight:bold;">Danh sách đề tài</h3>
 	</div>

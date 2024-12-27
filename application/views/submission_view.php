@@ -80,7 +80,7 @@
     </style>
 </head>
 <body>
-    <?php require('header.php'); ?>
+    <?php require('header.php')?>
     <input type="hidden" id="lecturerId" value="<?= $lecturer_id ?>">
     <div class="container d-flex justify-content-between align-items-center">
         <h3 class="text" style="color:#286B81;text-transform:uppercase; font-weight:bold;">Danh sách sinh viên</h3>

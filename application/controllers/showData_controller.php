@@ -57,16 +57,21 @@ class showData_controller extends CI_Controller
 	}
 	public function deleteData($idnhanduoc)
 	{
-		//echo $idnhanduoc;
-		if ($_SESSION['username'] >= 7030000 || $_SESSION['username'] <= 7020000) {
-			$this->load->view('thongbao_view');
-		} else {
+		// Tải model để lấy vai trò người dùng
+		$this->load->model('quyentruycap_model');
+		$role = $this->quyentruycap_model->getRole($_SESSION['username']);
+
+		// Kiểm tra quyền truy cập
+		if ($role === 'giaovu') {
 			$this->load->model('showData_model');
 			if ($this->showData_model->deleteDatabyid($idnhanduoc)) {
 				$this->load->view('thongbaoxoathanhcong.php');
 			} else {
 				echo "Xóa thất bại";
 			}
+		} else {
+			// Thông báo không đủ quyền truy cập
+			$this->load->view('thongbaokhongcoquyentruycap_view');
 		}
 	}
 	public function editSim($idlayve)

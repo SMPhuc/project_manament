@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<?php require('header.php'); ?>
+	<?php require('header.php')?>
 	<div class="container">
 		<h3 class="text" style="color:#286B81;text-transform:uppercase; font-weight:bold;">Danh sách đề tài</h3>
 	</div>

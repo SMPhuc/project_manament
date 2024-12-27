@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Chưa đăng kí đề tài</title>
+	<title>Chưa đăng ký đề tài</title>
 	<script type="text/javascript" src="http://localhost:3000/vendor/bootstrap.js"></script>
  	<script type="text/javascript" src="http://localhost:3000/1.js"></script>
 	<link rel="stylesheet" href="http://localhost:3000/vendor/bootstrap.css">
@@ -12,7 +12,7 @@
 </head>
 <body>
 	<?php require('header.php') ?>;
-	<h2 class="text-xs-center">Bạn chưa đăng kí đề tài</h2>
+	<h2 class="text-xs-center">Bạn chưa đăng ký đề tài</h2>
 	<div class="container text-xs-center">
 		<a href="http://localhost:3000/dangkidetai_controller"  class="btn btn-info">Quay lại</a>
 	</div>
