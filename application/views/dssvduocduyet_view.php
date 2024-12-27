@@ -10,6 +10,22 @@
 	<link rel="stylesheet" href="http://localhost:3000/vendor/font-awesome.css">
 	<link rel="stylesheet" href="http://localhost:3000/start2_css.css">
 	<link rel="stylesheet" href="http://localhost:3000/showdata_css.css">
+	<style>
+		.student-count {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			font-size: 16px;
+			font-weight: bold;
+			color: #286B81;
+			background-color: #f0f0f0;
+			border: 1px solid #286B81;
+			border-radius: 4px;
+			padding: 5px;
+			width: 30px;
+			text-align: center;
+		}
+	</style>
 </head>
 
 <body>
@@ -27,11 +43,12 @@
 					<?php endif; ?>
 					<td>
 						<div class="col-sm-10">
-							<div class="card card-block">
-							<h3 class="card-title">Tên đề tài: <?= $value['project_title'] ?></h3>
-							<p class="card-text">Giảng viên: <?= $value['lecturer'] ?></p>
-							<p class="card-text">Mã giảng viên: <?= $value['lecturer_id'] ?></p>
-							<a href="dssinhvienduocduyet_controller/danhsachsinhvien/<?= $value['id'] ?>/<?= $value['project_title'] ?>" class="btn btn-outline-warning sua"><i class="fa fa-book"></i></a>
+							<div class="card card-block" style="position: relative;">
+								<h3 class="card-title">Tên đề tài: <?= $value['project_title'] ?></h3>
+								<p class="card-text">Giảng viên: <?= $value['lecturer'] ?></p>
+								<p class="card-text">Mã giảng viên: <?= $value['lecturer_id'] ?></p>
+								<a href="dssinhvienduocduyet_controller/danhsachsinhvien/<?= $value['id'] ?>/<?= $value['project_title'] ?>" class="btn btn-outline-warning sua"><i class="fa fa-book"></i></a>
+								<span class="student-count"><?= $value['student_count'] ?></span>
 							</div>
 						</div>
 					</td>

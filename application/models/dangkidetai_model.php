@@ -115,6 +115,12 @@ class dangkidetai_model extends CI_Model
 		$query = $this->db->get('approved_student_list'); // Giả sử bảng này lưu thông tin đăng ký
 		return $query->num_rows() > 0;
 	}
+	public function getStudentCountByProject($projectId)
+	{
+		$this->db->where('project_id', $projectId);
+		$this->db->from('approved_student_list'); // Giả sử bảng lưu trữ thông tin sinh viên đăng ký là 'student_projects'
+		return $this->db->count_all_results();
+	}
 }
 
 /* End of file dangkidetai_model.php */

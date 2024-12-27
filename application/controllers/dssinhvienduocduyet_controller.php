@@ -23,10 +23,18 @@ class dssinhvienduocduyet_controller extends CI_Controller {
 		else
 		{
 			$this->load->model('showData_model');
-			$tin=$this->showData_model->getDatabase();
-			$tin= array('dulieutucontroller' =>$tin);
-			$this->load->view('dssvduocduyet_view.php', $tin, FALSE);
+			$this->load->model('dangkidetai_model');
+			
+			$projects = $this->showData_model->getDatabase();
+			
+			// Lấy số lượng sinh viên cho mỗi đề tài
+			foreach ($projects as &$project) {
+				$project['student_count'] = $this->dangkidetai_model->getStudentCountByProject($project['id']);
 			}
+			
+			$data = array('dulieutucontroller' => $projects);
+			$this->load->view('dssvduocduyet_view.php', $data, FALSE);
+		}
 	}
 	public function danhsachsinhvien($idlayve)
 {
