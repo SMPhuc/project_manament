@@ -1,0 +1,19 @@
+body{
+    background-image: url(img/bg_.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+     padding-top: 100px; 
+
+}
+
+#table_cvk{
+	display: grid;
+	grid-template-columns: 200px;
+    grid-template-rows: 30px 30px 30px 30px 30px 30px;
+}
+#head_cvk{
+	width: 200px;
+	bottom: 20px;
+	height: 100%;
+}

@@ -1,0 +1,142 @@
+
+body {
+    background-image: url(img/4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+   /*  position: relative; */
+    background-size: 55%;
+    background-position: 70px 5px;
+
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  /* height:86.3%; */
+  height: 2000px;
+  width: 250px;
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 0;
+  background-color: #124874;
+  overflow-x: hidden;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #E4E4E4;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #EED65F;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  /* font-size: 20px;  *//* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #124874;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #15313a;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+button:focus{
+	outline: none;
+}
+
+.login_thongbao{
+	height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 120px;
+  padding-left: 100px;
+  left: 0;
+}
+
+.navbar{
+	top: 105px;
+	height: 2px;
+	position: relative;
+    padding: 0;
+}
+.line_2{
+	top: 150px;
+	height: 1px;
+	position: relative;
+    padding: 0;
+}
+.user-info {
+  position: absolute; /* Để cho nó có thể định vị tương đối */
+  top: 50px; /* Cách từ đỉnh xuống 20px */
+  right: 30px; /* Cách từ bên phải vào 20px */
+  background-color: #fff; /* Màu nền trắng */
+  border: 1px solid #ccc; /* Đường viền xám nhạt */
+  padding: 10px; /* Khoảng cách bên trong */
+  border-radius: 4px; /* Bo tròn góc */
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2); /* Đổ bóng nhẹ */
+  z-index: 1; /* Đảm bảo nó nằm trên các phần tử khác */
+  font-size: 16px; /* Kích thước chữ */
+}
+
+
+
+
+.table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 80px; 
+}
+
+.table-bordered {
+  border: 2px solid #9da5aa; /* Border ngoài của bảng */
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 2px solid #9da5aa; /* Border giữa các ô */
+  text-align: left; /* Tùy chọn: căn chỉnh nội dung trong ô */
+  padding: 8px; /* Tùy chọn: khoảng cách bên trong ô */
+}
+
+.table-bordered thead th {
+  background-color: #81bef0d4; /* Tùy chọn: làm nổi bật phần tiêu đề */
+  border-color: #9da5aa; /* Border của tiêu đề */
+}
+

@@ -1,0 +1,41 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect Trailing Slashes...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Remove index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteEngine On
+
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+Options All -Indexes
+</IfModule>
+
+# Cho phép truy cập vào thư mục uploads
+RewriteCond %{REQUEST_URI} ^/uploads/
+RewriteRule ^uploads/(.*)$ C:\Users\sonmi\Documents\TieuLuanTotNghiep\uploads/$1 [L]
+
+# Chỉ cho phép tải lên các tệp an toàn trong thư mục uploads/
+<Directory "C:\Users\sonmi\Documents\TieuLuanTotNghiep\uploads">
+    <FilesMatch "\.(jpg|jpeg|png|gif|pdf)$">
+        Allow from all
+    </FilesMatch>
+    Deny from all
+</Directory>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit

@@ -1,0 +1,126 @@
+/* Đảm bảo body không thay đổi */
+body {
+    background-image: url(img/4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 55%;
+    background-position: 70px 5px;
+}
+
+/* Container tổng */
+.container {
+    width: 100%;
+    max-width: 1280px; /* Đặt chiều rộng tối đa là 1500px */
+    min-width: 300px; /* Đặt chiều rộng tối thiểu là 300px */
+    margin: 0 auto; /* Căn giữa container */
+    margin-left: 250px; /* Lề trái bằng chiều rộng của sidebar (250px) */
+}
+
+/* Thiết kế bảng */
+table {
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng của container */
+    max-width: 100%; /* Không vượt quá chiều rộng của container */
+    min-width: 300px; /* Đảm bảo bảng không nhỏ hơn 300px */
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center; /* Canh giữa nội dung trong các ô */
+}
+
+td {
+    width: 33.33%; /* Mỗi ô trong bảng chiếm 1/3 chiều rộng */
+    vertical-align: top; /* Canh giữa theo chiều dọc */
+}
+
+/* Thẻ card */
+.card-block {
+    width: 100%; /* Đảm bảo card chiếm hết chiều rộng của ô */
+    min-height: 300px; /* Đảm bảo chiều cao tối thiểu */
+    height: auto; /* Chiều cao tự động theo nội dung */
+    border: 1px solid #ccc; /* Viền để nhìn rõ các card */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Sắp xếp nội dung theo cột */
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s; /* Thêm hiệu ứng khi hover */
+}
+/* Căn đều các nút bên trong click-function */
+.click-function {
+    display: flex;
+    justify-content: space-between; /* Căn các nút đều giữa theo chiều ngang */
+    align-items: center; /* Căn các nút đều theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các nút */
+    margin-top: 10px; /* Đặt khoảng cách giữa các nút và phần tử phía trên */
+}
+
+/* Căn chỉnh các nút con bên trong click-function */
+.click-function a {
+    display: inline-block; /* Giữ các nút ở dạng inline-block */
+    padding: 10px 15px; /* Thêm padding cho các nút */
+    border-radius: 4px; /* Bo tròn các góc */
+    text-align: center; /* Căn giữa chữ trong nút */
+    font-size: 16px; /* Kích thước chữ trong các nút */
+    width: auto; /* Đảm bảo kích thước tự động theo nội dung */
+}
+
+/* Thêm màu sắc cho các nút */
+/* .xoa {
+    background-color: #28a745;
+    color: white;
+}
+
+.sua {
+    background-color: #dc3545;
+    color: white;
+}
+
+.noidungdetai {
+    background-color: #fcff38;
+    color: white;
+} */
+
+/* Hiệu ứng hover cho các nút */
+.click-function a:hover {
+    opacity: 0.8; /* Giảm độ sáng khi hover */
+    transition: opacity 0.3s; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.card-block:hover {
+    transform: translateY(-5px); /* Di chuyển nhẹ lên khi hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Tăng hiệu ứng đổ bóng */
+}
+
+/* Điều chỉnh thêm cho các lớp khác */
+.navbar {
+    top: 100px;
+}
+
+.alert {
+    top: 200px;
+}
+
+.text {
+    padding-top: 110px;
+}
+
+/* Responsive: Ở màn hình nhỏ hơn, hiển thị 1 card mỗi hàng */
+@media (max-width: 768px) {
+    td {
+        width: 100%; /* Mỗi ô chiếm 100% chiều rộng trên màn hình nhỏ */
+    }
+
+    .card-block {
+        width: 100%; /* Đảm bảo card chiếm toàn bộ chiều rộng của ô */
+    }
+
+    .container {
+        margin-left: 0; /* Không có lề trái trên màn hình nhỏ */
+    }
+}

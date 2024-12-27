@@ -1,0 +1,14 @@
+body{
+    background-image: url(img/bg_.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;
+}
+.text-xs-center {
+    text-align: center !important;
+    padding-top: 10px;
+}
+.row{
+
+}

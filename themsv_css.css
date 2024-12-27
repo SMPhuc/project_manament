@@ -1,0 +1,13 @@
+body{
+    background-image: url(img/bg_.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;
+}
+.container{
+	padding-top: 50px;
+}
+.btn{
+	background-color: #286B81;
+}
