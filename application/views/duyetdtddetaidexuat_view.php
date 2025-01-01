@@ -33,6 +33,7 @@
 									<div class="click-function">
 										<a href="duyetdetaidexuat_controller/duyetdetai/<?=$value['id']?>" class="btn btn-outline-warning sua"><i class="fa fa-check"></i></a>
 										<a href="duyetdetaidexuat_controller/noidungdetai/<?=$value['id']?>" class="btn btn-outline-danger xem"><i class="fa fa-book"></i></a>
+										<a href="duyetdetaidexuat_controller/deleteDetai/<?=$value['id']?>" class="btn btn-outline-success xoa"><i class="fa fa-trash"></i></a>
 									</div>
 								</div>
 							</div>

@@ -32,23 +32,23 @@
 						<div class="card-block">
 							<fieldset class="form-group">
 								<label for="formGroupExampleInput">Mã số sinh viên:</label>
-								<input type="text" name="mssv" class="form-control" id="formGroupExampleInput" autocomplete="off">
+								<input type="text" name="mssv" class="form-control" id="formGroupExampleInput" autocomplete="off" value="<?php echo isset($form_data['mssv']) ? htmlspecialchars($form_data['mssv']) : ''; ?>">
 							</fieldset>
 							<fieldset class="form-group">
 								<label for="formGroupExampleInput1">Tên sinh viên:</label>
-								<input type="text" name="sinhvien" class="form-control" id="formGroupExampleInput1" autocomplete="off"></textarea>
+								<input type="text" name="sinhvien" class="form-control" id="formGroupExampleInput1" autocomplete="off" value="<?php echo isset($form_data['sinhvien']) ? htmlspecialchars($form_data['sinhvien']) : ''; ?>"></textarea>
 							</fieldset>
 							<fieldset class="form-group">
 								<label for="formGroupExampleInput1">Khoa:</label>
-								<input type="text" name="khoa" class="form-control" id="formGroupExampleInput1" autocomplete="off"></textarea>
+								<input type="text" name="khoa" class="form-control" id="formGroupExampleInput1" autocomplete="off" value="<?php echo isset($form_data['khoa']) ? htmlspecialchars($form_data['khoa']) : ''; ?>"></textarea>
 							</fieldset>
 							<fieldset class="form-group">
 								<label for="formGroupExampleInput1">Ngành:</label>
-								<input type="text"  name="ngành" class="form-control" id="formGroupExampleInput1" autocomplete="off"></textarea>
+								<input type="text"  name="ngành" class="form-control" id="formGroupExampleInput1" autocomplete="off" value="<?php echo isset($form_data['nganh']) ? htmlspecialchars($form_data['nganh']) : ''; ?>"></textarea>
 							</fieldset>
 							<fieldset class="form-group">
 								<label for="formGroupExampleInput1">Lớp:</label>
-								<input type="text"  name="lop" class="form-control" id="formGroupExampleInput1" autocomplete="off"></textarea>
+								<input type="text"  name="lop" class="form-control" id="formGroupExampleInput1" autocomplete="off" value="<?php echo isset($form_data['lop']) ? htmlspecialchars($form_data['lop']) : ''; ?>"></textarea>
 							</fieldset>
 							
 							</fieldset>

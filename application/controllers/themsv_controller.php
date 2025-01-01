@@ -28,20 +28,25 @@ class themsv_controller extends CI_Controller {
 	}
 	function insert()
 	{
-		$_SESION['mssv'] = $this->input->post('mssv');
+		$mssv = $this->input->post('mssv');
 		$sinhvien = $this->input->post('sinhvien');
 		$khoa = $this->input->post('khoa');
 		$nganh = $this->input->post('ngành');
 		$lop = $this->input->post('lop');
 		$this->load->model('themsvgv_model');
 
-		if (empty($_SESION['mssv']) || empty($sinhvien) || empty($khoa) || empty($nganh) || empty($lop)) {
+		// Lưu dữ liệu đã nhập vào session
+		$_SESSION['form_data'] = compact('mssv', 'sinhvien', 'khoa', 'nganh', 'lop');
+
+		if (empty($mssv) || empty($sinhvien) || empty($khoa) || empty($nganh) || empty($lop)) {
 			$this->load->view('chuanhapdayduthongtin_view.php');
 		} else {
-			if ($this->themsvgv_model->themsv($_SESION['mssv'], $sinhvien, $khoa, $nganh, $lop)) {
-				$this->load->view('thongbaonhapthanhcong_view.php');
+			if ($this->themsvgv_model->isStudentExists($mssv)) {
+				$this->load->view('svdaco_view.php', ['form_data' => $_SESSION['form_data']]);
 			} else {
-				$this->load->view('svdaco_view.php');
+				$this->themsvgv_model->themsv($mssv, $sinhvien, $khoa, $nganh, $lop);
+				unset($_SESSION['form_data']); // Xóa dữ liệu sau khi thêm thành công
+				$this->load->view('thongbaonhapthanhcong_view.php');
 			}
 		}
 	}

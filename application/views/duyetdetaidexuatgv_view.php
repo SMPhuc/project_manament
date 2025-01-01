@@ -38,6 +38,7 @@
                         <td><?php echo htmlspecialchars($d['giang_vien']); ?></td>
                         <td>
                             <a href="<?php echo site_url('DuyetDeTaiDeXuatGV_controller/duyet/' . $d['id']); ?>" class="btn btn-success">Duyệt</a>
+                            <a href="<?php echo site_url('duyetdetaidexuat_controller/deleteDetai/' . $detai['id']); ?>" class="btn btn-danger">Xóa</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

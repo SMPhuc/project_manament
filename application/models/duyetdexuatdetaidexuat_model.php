@@ -33,8 +33,7 @@ class duyetdexuatdetaidexuat_model extends CI_Model {
 	public function deletebyid($id)
 	{
 		$this->db->where('id', $id);
-		return $this->db->delete('proposed_project_list');
-		
+		$this->db->delete('proposed_project_list');
 	}
 }
 

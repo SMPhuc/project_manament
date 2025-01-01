@@ -50,7 +50,7 @@
 							<span class="<?php 
 								echo $proposal['status'] == 1 ? 'status-approved' : 
 									 ($proposal['status'] == 0 ? 'status-pending' : 'status-rejected'); ?>">
-								<?= $proposal['status'] == 1 ? 'Approved' : 'Pending'; ?>
+								<?= $proposal['status'] == 1 ? 'Approved' : 'Waiting'; ?>
 							</span>
 						</p>
 					</div>
