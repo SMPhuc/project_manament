@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head></head>
     <meta charset="UTF-8">
     <title>Theo dõi quá trình thực hiện</title>
     <script type="text/javascript" src="http://localhost:3000/vendor/bootstrap.js"></script>

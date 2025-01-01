@@ -67,6 +67,13 @@ class duyetdetaidexuat_controller extends CI_Controller {
 		$this->load->view('thongbaoduyetdetaidexuatthanhcong.php');
 	}
 
+	public function deleteDetai($idlayve)
+	{
+		$this->load->model('duyetdexuatdetaidexuat_model');
+		$this->duyetdexuatdetaidexuat_model->deletebyid($idlayve);
+		$this->load->view('thongbaoxoathanhcong.php');
+	}
+
 }
 
 /* End of file duyetdetaidexuat_controller.php */

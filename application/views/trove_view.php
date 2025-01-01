@@ -27,7 +27,7 @@
                     <h3 class="card-title" style="color: #124874;">Tên đề tài: <?= $value['project_title'] ?></h3>
                     <p class="card-text"><b>Nội dung đề tài:</b> <?= $value['content'] ?></p>
                     <div style="margin-top: 20px;">
-                        <a href="http://localhost:3000/duyetdetaidexuat_controller" class="btn btn-info" style="margin-right: 10px;">Quay lại</a>
+                        <a href="http://localhost:3000/showData_controller" class="btn btn-info" style="margin-right: 10px;">Quay lại</a>
                     </div>
                 </div>
             </div>

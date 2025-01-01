@@ -37,22 +37,15 @@ class addData_controller extends CI_Controller {
     	$thongtin=$this->addData_model->searchDatabaseGV($ma);
 		$tendetai = $this->input->post('project_title');
 		$noidung = $this->input->post('content');
-		$tengv = $this->input->post('lecturer');
+		$tengv = $this->input->post('lecturer_name');
 		$magv = $this->input->post('lecturer_id');
-		foreach( $thongtin as $value )
-    	{
-    		 $magv=$value['lecturer_id']; 
-    		 $tengv=$value['lecturer'];
-    	}
-    	if(empty($tendetai)||empty($noidung)||empty($tengv)||empty($magv))
-    	{
-    		$this->load->view('nhaplaithemdetai_view');
-    	}
-    	else
-    	{
-		$this->load->model('addData_model');
-		$this->addData_model->insert($tendetai,$noidung,$magv,$tengv);
-			$this->load->view('thanhcong.php');	
+
+		if (empty($tendetai) || empty($noidung) || empty($tengv) || empty($magv)) {
+			$this->load->view('nhaplaithemdetai_view');
+		} else {
+			$this->load->model('addData_model');
+			$this->addData_model->insert($tendetai, $noidung, $magv, $tengv);
+			$this->load->view('thanhcong.php');
 		}
 	}
 	public function uploadExcel()

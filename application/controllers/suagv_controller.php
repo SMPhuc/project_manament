@@ -2,11 +2,13 @@
 session_start();
 ?>
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class suagv_controller extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->database();
 	}
 
 	public function index()
@@ -21,25 +23,27 @@ class suagv_controller extends CI_Controller {
 			$this->load->view('suagv_view.php');
 		}
 	}
-	function edit($lecturer_id)
+
+	function edit($lecturer_id = null)
 	{
+		if ($lecturer_id === null) {
+			$lecturer_id = $this->input->post('lecturer_id');
+		}
+		$_SESSION['msgvlayve'] = $lecturer_id;
 		$this->load->model('suasvgv_model');
-		$lecturer = $this->suasvgv_model->getLecturerById($lecturer_id);
-		
-		if ($lecturer) {
-			$data = [
-				'lecturer' => $lecturer,
-				'mangkq' => [$lecturer]
-			];
-			$this->load->view('editgv_view', $data);
+		$data = $this->suasvgv_model->searchGV($lecturer_id);
+		if ($data == true) {
+			$dulieu = $this->suasvgv_model->laythongtingv($lecturer_id);
+			$dulieu = array('mangkq' => $dulieu);
+			$this->load->view('editgv_view.php', $dulieu, FALSE);
 		} else {
-			echo "Không tìm thấy giảng viên với mã số: " . $lecturer_id;
-			$this->load->view('lecturer_not_found_view');
+			$this->load->view('khongtimthaygv_view.php');
 		}
 	}
+
 	function update()
 	{
-		$data = $_SESSION['lecturer_id'];
+		$data = $_SESSION['msgvlayve'];
 		$msgv = $this->input->post('lecturer_id');
 		$giangvien = $this->input->post('lecturer');
 		$khoa = $this->input->post('department');
@@ -53,8 +57,6 @@ class suagv_controller extends CI_Controller {
 			$this->load->view('quayvetrangsuagv_view.php');
 		}
 	}
-	
-
 }
 
 /* End of file suagv_controller.php */
